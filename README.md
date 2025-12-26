@@ -34,10 +34,10 @@
     - `S` — South  
     - `E` — East  
     - `W` — West  
-    - `R` — Center (return to center)
+    - `Z` — Center (return to center)
 
 > **Notes:**  
-> - Directions (except `R`) can be followed by a number to indicate multiple blocks.  
+> - Directions (except `Z`) can be followed by a number to indicate multiple blocks.  
 >   - Example: `U3` = 3 blocks up  
 >   - Consecutive directions can be combined: `U U U` = `U3`
 
