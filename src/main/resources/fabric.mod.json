@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "clientstructurefinder",
+  "version": "${version}",
+  "name": "clientstructurefinder",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/clientstructurefinder/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "icu.eseabs0.clientstructurefinder.ClientStructureFinderClient"
+    ]
+  },
+  "mixins": [
+    "clientstructurefinder.mixins.json"
+  ],
+  "accessWidener": "clientstructurefinder.accesswidener",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "clientcommands": ">=${clientcommands_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": [
+        "client"
+      ],
+      "update_checker": false
+    }
+  }
+}
