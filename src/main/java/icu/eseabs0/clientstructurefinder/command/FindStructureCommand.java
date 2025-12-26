@@ -7,8 +7,8 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import icu.eseabs0.clientstructurefinder.structure.SingleBlock;
 import icu.eseabs0.clientstructurefinder.structure.StructurePattern;
 import icu.eseabs0.clientstructurefinder.structure.StructurePatternArgument;
-import icu.eseabs0.clientstructurefinder.clientcommandadapted.RenderDistanceScanTask;
 import net.earthcomputer.clientcommands.command.Flag;
+import net.earthcomputer.clientcommands.task.RenderDistanceScanTask;
 import net.earthcomputer.clientcommands.task.TaskManager;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.client.Minecraft;
@@ -27,7 +27,7 @@ import java.util.Objects;
 
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.string;
-import static icu.eseabs0.clientstructurefinder.clientcommandadapted.ClientCommandHelper.*;
+import static net.earthcomputer.clientcommands.command.ClientCommandHelper.*;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.*;
 
 public class FindStructureCommand {

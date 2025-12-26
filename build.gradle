@@ -43,7 +43,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation "maven.modrinth:modmenu:${project.modmenu_version}"
-    compileOnly "maven.modrinth:client-commands:${project.clientcommands_version}"
+    modCompileOnly "maven.modrinth:client-commands:${project.clientcommands_version}"
 }
 
 processResources {

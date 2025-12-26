@@ -6,7 +6,7 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-import icu.eseabs0.clientstructurefinder.clientcommandadapted.ClientBlockPredicateArgument;
+import net.earthcomputer.clientcommands.command.arguments.ClientBlockPredicateArgument;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.core.Vec3i;
@@ -158,7 +158,7 @@ public class StructurePatternArgument implements ArgumentType<StructurePatternAr
             }
 
             if (isDirectionToken(token, directional)) {
-                offset = applyDirection(offset, token, directional);
+                offset = applyDirection(offset, token);
                 i++;
                 continue;
             }
@@ -174,7 +174,7 @@ public class StructurePatternArgument implements ArgumentType<StructurePatternAr
         return !isDirectionToken(token, directional);
     }
 
-    private static Vec3i applyDirection(Vec3i current, String token, boolean directional) {
+    private static Vec3i applyDirection(Vec3i current, String token) {
         if (token.equals("Z")) {
             return Vec3i.ZERO;
         }

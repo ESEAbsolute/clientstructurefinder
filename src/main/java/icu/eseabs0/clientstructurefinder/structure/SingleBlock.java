@@ -1,6 +1,6 @@
 package icu.eseabs0.clientstructurefinder.structure;
 
-import icu.eseabs0.clientstructurefinder.clientcommandadapted.ClientBlockPredicateArgument;
+import net.earthcomputer.clientcommands.command.arguments.ClientBlockPredicateArgument;
 import net.minecraft.core.Vec3i;
 
 public record SingleBlock (
