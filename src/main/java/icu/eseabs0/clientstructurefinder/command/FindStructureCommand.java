@@ -28,6 +28,8 @@ import java.util.Objects;
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.string;
 import static net.earthcomputer.clientcommands.command.ClientCommandHelper.*;
+import static net.earthcomputer.clientcommands.util.CComponentUtil.getGlowButtonTextComponent;
+import static net.earthcomputer.clientcommands.util.CComponentUtil.getLookCoordsTextComponent;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.*;
 
 public class FindStructureCommand {
@@ -153,7 +155,7 @@ public class FindStructureCommand {
             if (closestStructureCore == null) {
                 sendError(Component.translatable("commands.cfindblock.notFound"));
             } else {
-                Entity cameraEntity = Objects.requireNonNullElse(Minecraft.getInstance().cameraEntity, Minecraft.getInstance().player);
+                Entity cameraEntity = Objects.requireNonNullElse(Minecraft.getInstance().getCameraEntity(), Minecraft.getInstance().player);
 
                 String foundRadius = "%.2f".formatted(Math.sqrt(closestStructureCore.distToCenterSqr(cameraEntity.getEyePosition(0))));
                 sendFeedback(
