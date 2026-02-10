@@ -28,6 +28,8 @@ import java.util.Objects;
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.string;
 import static net.earthcomputer.clientcommands.command.ClientCommandHelper.*;
+import static net.earthcomputer.clientcommands.util.CComponentUtil.getGlowButtonTextComponent;
+import static net.earthcomputer.clientcommands.util.CComponentUtil.getLookCoordsTextComponent;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.*;
 
 public class FindStructureCommand {
