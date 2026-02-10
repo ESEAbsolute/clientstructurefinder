@@ -24,6 +24,7 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
+import java.util.Set;
 
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.string;
@@ -79,6 +80,11 @@ public class FindStructureCommand {
         FindStructureTask(StructurePattern pattern, boolean keepSearching) {
             super(keepSearching);
             this.pattern = pattern;
+        }
+
+        @Override
+        public Set<Object> getMutexKeys() {
+            return Set.of();
         }
 
         @Override
@@ -155,7 +161,7 @@ public class FindStructureCommand {
             if (closestStructureCore == null) {
                 sendError(Component.translatable("commands.cfindblock.notFound"));
             } else {
-                Entity cameraEntity = Objects.requireNonNullElse(Minecraft.getInstance().getCameraEntity(), Minecraft.getInstance().player);
+                Entity cameraEntity = Objects.requireNonNullElse(Minecraft.getInstance().cameraEntity, Minecraft.getInstance().player);
 
                 String foundRadius = "%.2f".formatted(Math.sqrt(closestStructureCore.distToCenterSqr(cameraEntity.getEyePosition(0))));
                 sendFeedback(

@@ -1,2 +1,3 @@
 accessWidener v2 named
 accessible field net/minecraft/client/gui/Gui overlayMessageTime I
+accessible field net/minecraft/client/Minecraft cameraEntity Lnet/minecraft/world/entity/Entity;
