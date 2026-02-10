@@ -19,7 +19,7 @@
   ],
   "accessWidener": "clientstructurefinder.accesswidener",
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": "*",
     "fabric-api": "*",
     "minecraft": "${minecraft_version_dependency}",
     "clientcommands": ">=${clientcommands_version}"

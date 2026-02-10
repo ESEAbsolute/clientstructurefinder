@@ -82,10 +82,10 @@ public class FindStructureCommand {
             this.pattern = pattern;
         }
 
-        @Override
-        public Set<Object> getMutexKeys() {
-            return Set.of();
-        }
+//        @Override
+//        public Set<Object> getMutexKeys() {
+//            return Set.of();
+//        }
 
         @Override
         protected void scanBlock(Entity cameraEntity, BlockPos pos) throws CommandSyntaxException {
